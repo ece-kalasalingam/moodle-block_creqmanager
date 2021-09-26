@@ -34,8 +34,6 @@ $string['blockconfig'] = 'Configuration';
 $string['blockrequest'] = 'Make a new request';
 $string['blockmanage'] = 'Manage your requests';
 $string['allarchivedrequests'] = 'All archived requests';
-$string['cmanager:myaddinstance'] = 'Add instance';
-$string['cmanager:addinstance'] = 'Add instance';
 
 // New course form.
 $string['editrequest'] = 'Edit a draft request';
@@ -136,7 +134,8 @@ $string['request_rule3'] = 'Please enter an enrolment key.';
 $string['creqmanager:addrecord'] = 'Add record';
 $string['creqmanager:viewrecord'] = 'View record';
 $string['creqmanager:editconfig'] = 'Edit config';
-
+$string['cmanager:myaddinstance'] = 'Add instance to Dashboard';
+$string['cmanager:addinstance'] = 'Add instance';
 
 // Welcome module_manager.
 $string['creqmanagerwelcome'] = 'Welcome to Course Request Manager. Before requesting a new course, please check your local guidelines.';
