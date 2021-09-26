@@ -46,7 +46,7 @@ class block_creqmanager extends block_base {
     }
     // Authorized Personnel Only.
     public function applicable_formats() {
-        return array('site-index' => true);
+        return array('site-index' => true, 'my' => true);
     }
     /**
      * prevent addition of more than one block instance
