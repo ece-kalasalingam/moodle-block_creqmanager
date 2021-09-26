@@ -80,13 +80,6 @@ if (isset($id)) {
         'termyearpos' => $termyearpos, 'termyearseparation' => $termyearseparation,
         'id' => $id);
         $mform = new block_creqmanager_adminsettings_form(null, $args);
-        $htmlfragment2 .= '
-            <h3 class = "mt-3">' . get_string('clearhistorytitle', 'block_creqmanager') . '</h3>
-            <input class = "btn btn-default" type = "button" onClick = "deleteAll()" value = "'
-            .get_string('deleteallrequests', 'block_creqmanager').'">
-            <input class = "btn btn-default" type = "button" onClick = "deleteArchOnly()"
-            value = "'.get_string('deleteonlyarch', 'block_creqmanager').'">
-        ';
     } else if ($id === 2) {
         $title .= ': '.get_string('configurecourseformfields', 'block_creqmanager');
         $htmlfragment1 .= $content;
