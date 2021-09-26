@@ -101,7 +101,7 @@ function block_creqmanager_get_html_content() {
         if (has_capability('block/creqmanager:addrecord', $context)) {
             $url = new moodle_url('/blocks/creqmanager/courserequest.php');
             $icon = html_writer::tag('i', '', array('class' => 'fa fa-file-o mr-2'));
-            $blockcontent .= '<hr /><p>'. html_writer::link($url, $icon.get_string('blockrequest', 'block_creqmanager'),
+            $blockcontent .= '<p>'. html_writer::link($url, $icon.get_string('blockrequest', 'block_creqmanager'),
             array('class' => 'btn btn-default ml-1', 'aria-label' => get_string('blockrequest', 'block_creqmanager'),
             'title' => get_string('blockrequest', 'block_creqmanager') )) . '</p>';
             if ($requestspendingforuser > 0) {
