@@ -134,8 +134,8 @@ $string['request_rule3'] = 'Please enter an enrolment key.';
 $string['creqmanager:addrecord'] = 'Add record';
 $string['creqmanager:viewrecord'] = 'View record';
 $string['creqmanager:editconfig'] = 'Edit config';
-$string['cmanager:myaddinstance'] = 'Add instance to Dashboard';
-$string['cmanager:addinstance'] = 'Add instance';
+$string['creqmanager:myaddinstance'] = 'Add instance to Dashboard';
+$string['creqmanager:addinstance'] = 'Add instance';
 
 // Welcome module_manager.
 $string['creqmanagerwelcome'] = 'Welcome to Course Request Manager. Before requesting a new course, please check your local guidelines.';
