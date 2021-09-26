@@ -98,26 +98,28 @@ function block_creqmanager_get_html_content() {
     // to allow requests to be made.
     $blockcontent = '';
     if ((isloggedin() && $USER->id != 1)) {
-        $url = new moodle_url('/blocks/creqmanager/courserequest.php');
-        $icon = html_writer::tag('i', '', array('class' => 'fa fa-file-o mr-2'));
-        $blockcontent .= '<hr /><p>'. html_writer::link($url, $icon.get_string('blockrequest', 'block_creqmanager'),
-        array('class' => 'btn btn-default ml-1', 'aria-label' => get_string('blockrequest', 'block_creqmanager'),
-        'title' => get_string('blockrequest', 'block_creqmanager') )) . '</p>';
-        if ($requestspendingforuser > 0) {
-            $url = new moodle_url('/blocks/creqmanager/manager.php');
-            $icon = html_writer::tag('i', '', array('class' => 'fa fa-file-text mr-2'));
-            $blockcontent .= '<p>'.html_writer::link($url, $icon.get_string('blockadmin', 'block_creqmanager').
-            ' ['.$requestspendingforuser.']',
-            array('class' => 'btn btn-default ml-1',
-            'aria-label' => get_string('blockadmin', 'block_creqmanager'),
-            'title' => get_string('blockadmin', 'block_creqmanager') )) . '</p>';
+        if (has_capability('block/creqmanager:addrecord', $context)) {
+            $url = new moodle_url('/blocks/creqmanager/courserequest.php');
+            $icon = html_writer::tag('i', '', array('class' => 'fa fa-file-o mr-2'));
+            $blockcontent .= '<hr /><p>'. html_writer::link($url, $icon.get_string('blockrequest', 'block_creqmanager'),
+            array('class' => 'btn btn-default ml-1', 'aria-label' => get_string('blockrequest', 'block_creqmanager'),
+            'title' => get_string('blockrequest', 'block_creqmanager') )) . '</p>';
+            if ($requestspendingforuser > 0) {
+                $url = new moodle_url('/blocks/creqmanager/manager.php');
+                $icon = html_writer::tag('i', '', array('class' => 'fa fa-file-text mr-2'));
+                $blockcontent .= '<p>'.html_writer::link($url, $icon.get_string('blockadmin', 'block_creqmanager').
+                ' ['.$requestspendingforuser.']',
+                array('class' => 'btn btn-default ml-1',
+                'aria-label' => get_string('blockadmin', 'block_creqmanager'),
+                'title' => get_string('blockadmin', 'block_creqmanager') )) . '</p>';
+            }
+            $url = new moodle_url('/blocks/creqmanager/manager.php',  array('status' => 'COMPLETE'));
+            $icon = html_writer::tag('i', '', array('class' => 'fa fa-hdd-o mr-2'));
+            $blockcontent .= '<p>'. html_writer::link($url, $icon.get_string('allarchivedrequests', 'block_creqmanager'),
+            array('class' => 'btn btn-default ml-1', 'aria-label' => get_string('allarchivedrequests', 'block_creqmanager'),
+            'title' => get_string('allarchivedrequests', 'block_creqmanager') )) . '</p>';
+            $blockcontent .= "<hr />". $adminhtml;
         }
-        $url = new moodle_url('/blocks/creqmanager/manager.php',  array('status' => 'COMPLETE'));
-        $icon = html_writer::tag('i', '', array('class' => 'fa fa-hdd-o mr-2'));
-        $blockcontent .= '<p>'. html_writer::link($url, $icon.get_string('allarchivedrequests', 'block_creqmanager'),
-        array('class' => 'btn btn-default ml-1', 'aria-label' => get_string('allarchivedrequests', 'block_creqmanager'),
-        'title' => get_string('allarchivedrequests', 'block_creqmanager') )) . '</p>';
-        $blockcontent .= "<hr />". $adminhtml;
     }
     return $blockcontent;
 }
