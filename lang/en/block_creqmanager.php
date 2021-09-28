@@ -25,8 +25,8 @@
  * @copyright  2021 Michael Milette (TNG Consulting Inc.), Daniel Keaman
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'Course Request Manager';
-$string['plugindesc'] = 'Course Request Manager';
+$string['pluginname'] = 'Course request manager';
+$string['plugindesc'] = 'Course request manager';
 
 // Block links.
 $string['blockadmin'] = 'Request queue';
@@ -73,9 +73,9 @@ $string['allowselfcategorization_help'] = 'When enabled, the user will be prompt
 
 $string['termname_help'] = 'Select the name for the new courses';
 $string['termname'] = 'Course {$a}';
-$string['coursedate'] = 'Course Start date';
+$string['coursedate'] = 'Course start date';
 $string['coursedate_help'] = 'Please select a default start date for new courses.';
-$string['aystartdate'] = 'Academic Year Start date';
+$string['aystartdate'] = 'Academic year start date';
 $string['aystartdate_help'] = 'Please select a default start date for the academic year. Will be used in naming the semester.';
 $string['termyearpos'] = '{$a} year position';
 $string['termyearpos_help'] = 'Define if the year should be added as suffix or prefix';
@@ -110,7 +110,7 @@ $string['optfield2values'] = 'Optional dropdown field values ';
 $string['timeless'] = 'Is course a timeless?';
 
 // Coureexists.
-$string['courseexists'] = 'Course Exists';
+$string['courseexists'] = 'Course exists';
 $string['courseexists_desc'] = 'It looks like the course you are requesting may already exists on this site. So, start again making a new request or';
 $string['catlocation'] = 'Catalogue location';
 $string['lecturingstaff'] = 'Lecturing staff';
@@ -138,4 +138,4 @@ $string['creqmanager:myaddinstance'] = 'Add instance to Dashboard';
 $string['creqmanager:addinstance'] = 'Add instance';
 
 // Welcome module_manager.
-$string['creqmanagerwelcome'] = 'Welcome to Course Request Manager. Before requesting a new course, please check your local guidelines.';
+$string['creqmanagerwelcome'] = 'Welcome to course request manager. Before requesting a new course, please check your local guidelines.';
